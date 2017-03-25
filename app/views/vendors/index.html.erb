@@ -1,0 +1,47 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vendors</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Firstname</th>
+      <th>Lastname</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Address1</th>
+      <th>Address2</th>
+      <th>City</th>
+      <th>Zip</th>
+      <th>Province</th>
+      <th>Country</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vendors.each do |vendor| %>
+      <tr>
+        <td><%= vendor.name %></td>
+        <td><%= vendor.firstname %></td>
+        <td><%= vendor.lastname %></td>
+        <td><%= vendor.email %></td>
+        <td><%= vendor.phone %></td>
+        <td><%= vendor.address1 %></td>
+        <td><%= vendor.address2 %></td>
+        <td><%= vendor.city %></td>
+        <td><%= vendor.zip %></td>
+        <td><%= vendor.province %></td>
+        <td><%= vendor.country %></td>
+        <td><%= link_to 'Show', vendor %></td>
+        <td><%= link_to 'Edit', edit_vendor_path(vendor) %></td>
+        <td><%= link_to 'Destroy', vendor, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor', new_vendor_path %>

@@ -1,0 +1,52 @@
+<%= form_for(vendor_price_quote) do |f| %>
+  <% if vendor_price_quote.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(vendor_price_quote.errors.count, "error") %> prohibited this vendor_price_quote from being saved:</h2>
+
+      <ul>
+      <% vendor_price_quote.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :product_id %>
+    <%= f.text_field :product_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :vendor %>
+    <%= f.text_field :vendor_id %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_of_measure %>
+    <%= f.text_field :unit_of_measure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stock_unit_of_measure %>
+    <%= f.text_field :stock_unit_of_measure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :price %>
+    <%= f.text_field :price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_of_origin_code %>
+    <%= f.text_field :country_of_origin_code %>
+  </div>
+
+  <div class="field">
+    <%= f.label :valid_from %>
+    <%= f.datetime_select :valid_from %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

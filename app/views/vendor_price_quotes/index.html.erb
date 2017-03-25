@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Vendor Price Quotes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Product</th>
+      <th>Vendor</th>
+      <th>Unit of measure</th>
+      <th>Stock unit of measure</th>
+      <th>Price</th>
+      <th>Country of origin code</th>
+      <th>Valid from</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @vendor_price_quotes.each do |vendor_price_quote| %>
+      <tr>
+        <td><%= vendor_price_quote.product %></td>
+        <td><%= vendor_price_quote.vendor %></td>
+        <td><%= vendor_price_quote.unit_of_measure %></td>
+        <td><%= vendor_price_quote.stock_unit_of_measure %></td>
+        <td><%= vendor_price_quote.price %></td>
+        <td><%= vendor_price_quote.country_of_origin_code %></td>
+        <td><%= vendor_price_quote.valid_from %></td>
+        <td><%= link_to 'Show', vendor_price_quote %></td>
+        <td><%= link_to 'Edit', edit_vendor_price_quote_path(vendor_price_quote) %></td>
+        <td><%= link_to 'Destroy', vendor_price_quote, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Vendor Price Quote', new_vendor_price_quote_path %>

@@ -1,0 +1,62 @@
+<%= form_for(product) do |f| %>
+  <% if product.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+
+      <ul>
+      <% product.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :name %>
+    <%= f.text_field :name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="field">
+    <%= f.label :unit_of_measure %>
+    <%= f.text_field :unit_of_measure %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stock_min %>
+    <%= f.text_field :stock_min %>
+  </div>
+
+  <div class="field">
+    <%= f.label :stock_max %>
+    <%= f.text_field :stock_max %>
+  </div>
+
+  <div class="field">
+    <%= f.label :shelf_life %>
+    <%= f.number_field :shelf_life %>
+  </div>
+
+  <div class="field">
+    <%= f.label :cost %>
+    <%= f.text_field :cost %>
+  </div>
+
+  <div class="field">
+    <%= f.label :selling_price %>
+    <%= f.text_field :selling_price %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country_of_origin_code %>
+    <%= f.text_field :country_of_origin_code %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

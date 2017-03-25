@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product:</strong>
+  <%= @vendor_price_quote.product %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @vendor_price_quote.vendor %>
+</p>
+
+<p>
+  <strong>Unit of measure:</strong>
+  <%= @vendor_price_quote.unit_of_measure %>
+</p>
+
+<p>
+  <strong>Stock unit of measure:</strong>
+  <%= @vendor_price_quote.stock_unit_of_measure %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @vendor_price_quote.price %>
+</p>
+
+<p>
+  <strong>Country of origin code:</strong>
+  <%= @vendor_price_quote.country_of_origin_code %>
+</p>
+
+<p>
+  <strong>Valid from:</strong>
+  <%= @vendor_price_quote.valid_from %>
+</p>
+
+<%= link_to 'Edit', edit_vendor_price_quote_path(@vendor_price_quote) %> |
+<%= link_to 'Back', vendor_price_quotes_path %>
