@@ -1,14 +1,20 @@
 <h1>Welcome to MarketMOBILE</h1>
 
 <h2>Products</h2>
-<%= link_to("See all", products_path) %>
-<%= link_to("New Product", new_product_path) %>
+<ul>
+  <li><%= link_to("See all", products_path) %></li>
+  <li><%= link_to("New Product", new_product_path) %></li>
+</ul>
 
 <h2>Vendors</h2>
-<%= link_to("See all", vendors_path) %>
-<%= link_to("New Vendors", new_vendor_path) %>
+<ul>
+  <li><%= link_to("See all", vendors_path) %></li>
+  <li><%= link_to("New Vendors", new_vendor_path) %></li>
+</ul>
 
 <h2>Vendor Info Record</h2>
-<%= link_to("New Info Record", new_vendor_price_quote_path) %>
-<%= link_to("View Price Comparison") %>
+<ul>
+  <li><%= link_to("New Info Record", new_vendor_price_quote_path) %></li>
+  <li><%= link_to("View Price Comparison") %></li>
+</ul>
 
