@@ -69,6 +69,6 @@ class VendorPriceQuotesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def vendor_price_quote_params
-      params.require(:vendor_price_quote).permit(:product_id, :vendor, :unit_of_measure, :stock_unit_of_measure, :price, :country_of_origin_code, :valid_from)
+      params.require(:vendor_price_quote).permit(:product_id, :vendor_id, :unit_of_measure, :stock_unit_of_measure, :price, :country_of_origin_code, :valid_from)
     end
 end

@@ -2,12 +2,12 @@
 
 <p>
   <strong>Product:</strong>
-  <%= @vendor_price_quote.product %>
+  <%= link_to(@vendor_price_quote.product.name) %>
 </p>
 
 <p>
   <strong>Vendor:</strong>
-  <%= @vendor_price_quote.vendor %>
+  <%= link_to(@vendor_price_quote.vendor.name) %>
 </p>
 
 <p>
