@@ -29,11 +29,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "therubyracer"
 gem "less-rails"
 gem "twitter-bootstrap-rails"
+gem 'pg'
 
-group :production do
-  gem 'pg'
-end
-
-group :production, :test do
-  gem 'sqlite3'
-end
