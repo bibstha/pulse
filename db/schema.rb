@@ -12,6 +12,9 @@
 
 ActiveRecord::Schema.define(version: 20170325174037) do
 
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
+
   create_table "products", force: :cascade do |t|
     t.string   "name"
     t.text     "description"
@@ -36,8 +39,8 @@ ActiveRecord::Schema.define(version: 20170325174037) do
     t.datetime "valid_from"
     t.datetime "created_at",             null: false
     t.datetime "updated_at",             null: false
-    t.index ["product_id"], name: "index_vendor_price_quotes_on_product_id"
-    t.index ["vendor_id"], name: "index_vendor_price_quotes_on_vendor_id"
+    t.index ["product_id"], name: "index_vendor_price_quotes_on_product_id", using: :btree
+    t.index ["vendor_id"], name: "index_vendor_price_quotes_on_vendor_id", using: :btree
   end
 
   create_table "vendors", force: :cascade do |t|
@@ -56,4 +59,6 @@ ActiveRecord::Schema.define(version: 20170325174037) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "vendor_price_quotes", "products"
+  add_foreign_key "vendor_price_quotes", "vendors"
 end

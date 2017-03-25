@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  start_date: 2017-03-25 16:09:23
+  end_date: 2017-03-25 16:09:23
+  vendor: one
+  description: MyText
+
+two:
+  start_date: 2017-03-25 16:09:23
+  end_date: 2017-03-25 16:09:23
+  vendor: two
+  description: MyText

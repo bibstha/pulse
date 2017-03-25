@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @price_range.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @price_range.end_date %>
+</p>
+
+<p>
+  <strong>Vendor:</strong>
+  <%= @price_range.vendor %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @price_range.description %>
+</p>
+
+<%= link_to 'Edit', edit_price_range_path(@price_range) %> |
+<%= link_to 'Back', price_ranges_path %>

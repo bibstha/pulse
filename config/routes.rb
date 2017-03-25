@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :price_ranges
   root "pages#welcome"
   resources :vendor_price_quotes
   resources :products
