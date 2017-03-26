@@ -10,10 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170325174037) do
+ActiveRecord::Schema.define(version: 20170325200923) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "price_ranges", force: :cascade do |t|
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "vendor_id"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+    t.index ["vendor_id"], name: "index_price_ranges_on_vendor_id", using: :btree
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "name"
@@ -59,6 +69,7 @@ ActiveRecord::Schema.define(version: 20170325174037) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "price_ranges", "vendors"
   add_foreign_key "vendor_price_quotes", "products"
   add_foreign_key "vendor_price_quotes", "vendors"
 end
